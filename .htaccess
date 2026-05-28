@@ -1,0 +1,8 @@
+Options -MultiViews
+DirectoryIndex index.php
+
+RewriteEngine On
+
+# Redirect direct access to index.php so the root URL stays clean.
+RewriteCond %{THE_REQUEST} \s/+index\.php[\s?] [NC]
+RewriteRule ^index\.php$ / [R=301,L]
